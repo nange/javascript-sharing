@@ -6,4 +6,4 @@
    * [理解闭包](sections/section1/closure.md)
 * [javascript中的面向对象](sections/section2/section2.md)
    * [理解prototype](sections/section2/prototype.md)
-   * [Swift 初见](chapter1/02_a_swift_tour.md)
+   * [实例](sections/section2/example.md)
