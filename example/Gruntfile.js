@@ -1,4 +1,4 @@
-﻿// Grunt configuration.
+// Grunt configuration.
 module.exports = function(grunt) {
   grunt.initConfig({
     connect: {
@@ -17,6 +17,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task(s).
-  grunt.registerTask('default', ['requirejs', 'connect']);
+  grunt.registerTask('default', ['connect']);
 
 };
