@@ -23,7 +23,9 @@
   }
   </style>
   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="shoppingCart.js"></script>
+  <script src="ProductItem.js"></script>
+  <script src="ShoppingCart.js"></script>
+  <script src="main.js"></script>
 </head>
 
 <body data-spm="6639537" class="cart-taobao ">
@@ -33,46 +35,16 @@
         <h1 id="logo" class="cart-logo">
           <a href="http://1212.taobao.com/" title="淘宝网 Taobao.com - 阿里巴巴旗下网站" target="_top">淘宝网</a>
         </h1>
-        <div class="search" id="J_Search" role="search">
-          <div class="search-triggers">
-            <ul class="ks-switchable-nav" id="J_SearchTab">
-              <li data-searchtype="item" data-defaultpage="nogo" class="J_SearchTab selected">
-                <a href="" data-spm-anchor-id="1.1000386.0.34">宝贝</a>
-              </li>
-              <li class="J_SearchTab" data-searchtype="mall" data-action="http://list.tmall.com/search_product.htm">
-                <a href="" data-spm-anchor-id="1.1000386.0.35">天猫</a>
-              </li>
-              <li class="J_SearchTab" data-searchtype="shop" data-action="http://s.taobao.com/search?app=shopsearch">
-                <a href="">店铺</a>
-              </li>
-            </ul>
-            <s><s></s></s>
-          </div>
-          <div class="search-panel search-hp-panel ks-switchable-content">
-            <form target="_top" action="http://s.taobao.com/search" name="search" id="J_TSearchForm" class="search-panel-focused">
-              <div class="search-button">
-                <button class="btn-search" type="submit">搜 索</button>
-              </div>
-              <div class="search-panel-fields search-hp-fields search-common-panel">
-                <div class="search-combobox" id="ks-component235">
-                  <div class="search-combobox-input-wrap">
-                    <input id="q" name="q" aria-label="请输入搜索文字" accesskey="s" autofocus="true" autocomplete="off" aria-haspopup="true" aria-combobox="list" role="combobox" class="search-combobox-input" x-webkit-speech="" x-webkit-grammar="builtin:translate">
-                  </div>
-                </div>
-                <i id="J_SearchIcon" style="display: none;"></i>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
       <div class="cart-layout-TB">
         <div id="J_Cart" class="cart">
           <div id="J_FilterBar" class="cart-filter-bar">
             <ul id="J_CartSwitch" class="switch-cart">
-              <li class="btn-switch-cart switch-cart-0 current"><a href="file:///home/nange/%E6%A1%8C%E9%9D%A2/shoppingCart/shoppingCart_files/shoppingCart.html" class="J_MakePoint" data-point="tbcart.8.35"><em>全部商品</em><span class="number">4</span><span class="pipe"></span></a>
+              <li class="btn-switch-cart switch-cart-0 current">
+              <a href="javascript:" class="J_MakePoint"><em>全部商品</em><span class="number">3</span><span class="pipe"></span></a>
               </li>
             </ul>
-            <div class="cart-sum">已选商品(不含运费)：<strong class="price">￥<em id="J_SmallTotal">0.00</em></strong><a id="J_SmallSubmit" class="submit-btn submit-btn-disabled">结&nbsp;算</a>
+            <div class="cart-sum">已选商品(不含运费)：<strong class="price">￥<em class="J_TotalPrice">0.00</em></strong><a id="J_SmallSubmit" class="submit-btn submit-btn-disabled">结&nbsp;算</a>
             </div>
             <div class="wrap-line">
               <div class="floater" style="width: 122px; left: -1px;"></div>
@@ -108,107 +80,95 @@
               </div>
             </div>
             <div id="J_OrderList" data-spm="1997196601" data-spm-max-idx="44">
-              <div id="J_OrderHolder_s_1020536390_1">
+              <div class="J_OrderItem">
                 <div id="J_Order_s_1020536390_1" class="J_Order clearfix order-body  ">
                   <div class="J_ItemHead shop clearfix">
                     <div class="shop-info">
-                      <span class="shop-icon icon-B"></span>店铺：<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.12.VfNOew&user_number_id=1020536390" target="_blank" title="云聚算图书专营店" class="J_MakePoint" data-point="tbcart.8.15" data-spm-anchor-id="a1z0d.6639537.1997196601.12">云聚算图书专营店</a>
-
-
+                      <span class="shop-icon icon-B"></span>店铺：<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.12.VfNOew&user_number_id=1020536390" target="_blank" title="云聚算图书专营店" class="J_MakePoint">云聚算图书专营店</a>
                     </div>
                   </div>
                   <div class="order-content">
                     <div id="J_BundleList_s_1020536390_1" class="item-list">
-                      <div id="J_Bundle_s_1020536390_1_0" class="bundle  bundle-last ">
-                        <div id="J_ItemHolder_92933035126">
-                          <div id="J_Item_92933035126" class="J_ItemBody item-body clearfix item-normal  first-item  last-item   ">
-                            <ul class="item-content clearfix">
-                              <li class="td td-chk">
-                                <div class="td-inner">
-                                  <div class="cart-checkbox ">
-                                    <input class="J_CheckBoxItem" id="J_CheckBox_92933035126" type="checkbox" name="items[]" value="92933035126">
-                                  </div>
-                                </div>
-                              </li>
-                              <li class="td td-item">
-                                <div class="td-inner">
-                                  <div class="item-pic J_ItemPic img-loaded">
-                                    <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.14.VfNOew&id=26466284401" target="_blank" class="J_MakePoint" data-point="tbcart.8.12" data-spm-anchor-id="a1z0d.6639537.1997196601.14"><img src="./shoppingCart_files/T1idNKFXhgXXXXXXXX_!!0-item_pic.jpg_80x80.jpg" class="itempic J_ItemImg">
-                                    </a>
-                                  </div>
-                                  <div class="item-info">
-                                    <div class="item-basic-info"> <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.15.VfNOew&id=26466284401" target="_blank" class="item-title J_MakePoint" data-point="tbcart.8.11" data-spm-anchor-id="a1z0d.6639537.1997196601.15">包邮！Go语言程序设计 一本权威的Go语言参考手册 go语言教程书籍</a>                                      </div>
-                                    <div class="item-other-info">
-                                      <div class="promo-logos"></div>
-                                      <div class="item-icon-list clearfix">
-                                        <div class="item-icons J_ItemIcons  item-icons-fixed ">
-                                          <a href="http://www.tmall.com/market/mall/qttk.php?spm=a1z0d.6639537.1997196601.16.VfNOew" target="_blank" class="item-icon item-icon-0 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺7天退换" data-spm-anchor-id="a1z0d.6639537.1997196601.16"><img src="./shoppingCart_files/T1Vyl6FCBlXXaSQP_X-16-16.png" alt="七天退换">
-                                          </a>
-                                          <a href="http://www.taobao.com/go/act/315/xfzbz_rsms.php?spm=a1z0d.6639537.1997196601.17.VfNOew&ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-1 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺如实描述" data-spm-anchor-id="a1z0d.6639537.1997196601.17"><img src="./shoppingCart_files/T1BCidFrNlXXaSQP_X-16-16.png" alt="如实描述">
-                                          </a>
-                                          <a href="http://www.taobao.com/go/act/315/xfzbz_jyps.php?spm=a1z0d.6639537.1997196601.18.VfNOew&ad_id=&am_id=1300118304240d56fca9&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-2 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺假一赔三" data-spm-anchor-id="a1z0d.6639537.1997196601.18"><img src="./shoppingCart_files/T1N5kmFSpbXXaSQP_X-16-16.png" alt="假一赔三">
-                                          </a><span class="item-icon item-icon-3" title="支持信用卡支付"><img src="./shoppingCart_files/T1uxT.FIXaXXaSQP_X-16-16.png" alt=""></span>
-                                        </div>
-                                      </div>
+                       <ul class="item-content clearfix">
+                          <li class="td td-chk">
+                            <div class="td-inner">
+                              <div class="cart-checkbox ">
+                                <input class="J_CheckBoxItem" id="J_CheckBox_92933035126" type="checkbox" name="items[]" value="92933035126">
+                              </div>
+                            </div>
+                          </li>
+                          <li class="td td-item">
+                            <div class="td-inner">
+                              <div class="item-pic J_ItemPic img-loaded">
+                                <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.14.VfNOew&id=26466284401" target="_blank" class="J_MakePoint" data-point="tbcart.8.12" data-spm-anchor-id="a1z0d.6639537.1997196601.14"><img src="./shoppingCart_files/T1idNKFXhgXXXXXXXX_!!0-item_pic.jpg_80x80.jpg" class="itempic J_ItemImg">
+                                </a>
+                              </div>
+                              <div class="item-info">
+                                <div class="item-basic-info"> <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.15.VfNOew&id=26466284401" target="_blank" class="item-title J_MakePoint" data-point="tbcart.8.11" data-spm-anchor-id="a1z0d.6639537.1997196601.15">包邮！Go语言程序设计 一本权威的Go语言参考手册 go语言教程书籍</a>                                      </div>
+                                <div class="item-other-info">
+                                  <div class="promo-logos"></div>
+                                  <div class="item-icon-list clearfix">
+                                    <div class="item-icons J_ItemIcons  item-icons-fixed ">
+                                      <a href="http://www.tmall.com/market/mall/qttk.php?spm=a1z0d.6639537.1997196601.16.VfNOew" target="_blank" class="item-icon item-icon-0 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺7天退换" data-spm-anchor-id="a1z0d.6639537.1997196601.16"><img src="./shoppingCart_files/T1Vyl6FCBlXXaSQP_X-16-16.png" alt="七天退换">
+                                      </a>
+                                      <a href="http://www.taobao.com/go/act/315/xfzbz_rsms.php?spm=a1z0d.6639537.1997196601.17.VfNOew&ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-1 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺如实描述" data-spm-anchor-id="a1z0d.6639537.1997196601.17"><img src="./shoppingCart_files/T1BCidFrNlXXaSQP_X-16-16.png" alt="如实描述">
+                                      </a>
+                                      <a href="http://www.taobao.com/go/act/315/xfzbz_jyps.php?spm=a1z0d.6639537.1997196601.18.VfNOew&ad_id=&am_id=1300118304240d56fca9&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-2 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺假一赔三" data-spm-anchor-id="a1z0d.6639537.1997196601.18"><img src="./shoppingCart_files/T1N5kmFSpbXXaSQP_X-16-16.png" alt="假一赔三">
+                                      </a><span class="item-icon item-icon-3" title="支持信用卡支付"><img src="./shoppingCart_files/T1uxT.FIXaXXaSQP_X-16-16.png" alt=""></span>
                                     </div>
                                   </div>
                                 </div>
-                              </li>
-                              <li class="td td-info">
-                                <div class="item-props "></div>
-                              </li>
-                              <li class="td td-price">
-                                <div class="td-inner">
-                                  <div class="item-price price-promo-">
-                                    <div class="price-content">
-                                      <div class="price-line"><em class="J_Price price-now" tabindex="0">56.50</em>
-                                      </div>
-                                    </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="td td-info">
+                            <div class="item-props "></div>
+                          </li>
+                          <li class="td td-price">
+                            <div class="td-inner">
+                              <div class="item-price price-promo-">
+                                <div class="price-content">
+                                  <div class="price-line"><em class="J_Price price-now" tabindex="0">56.50</em>
                                   </div>
                                 </div>
-                              </li>
-                              <li class="td td-amount">
-                                <div class="td-inner">
-                                  <div class="amount-wrapper ">
-                                    <div class="item-amount "><a href="http://cart.taobao.com/cart.htm?spm=a1z0d.6639537.1997196601.19.VfNOew&from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739" class="J_Minus no-minus" data-spm-anchor-id="a1z0d.6639537.1997196601.19">-</a>
-                                      <input type="text" value="1" class="text text-amount J_ItemAmount" data-max="307" data-now="1" autocomplete="off"><a href="http://cart.taobao.com/cart.htm?spm=a1z0d.6639537.1997196601.20.VfNOew&from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739" class="J_Plus plus" data-spm-anchor-id="a1z0d.6639537.1997196601.20">+</a>
-                                    </div>
-                                    <div class="amount-msg J_AmountMsg"></div>
-                                  </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="td td-amount">
+                            <div class="td-inner">
+                              <div class="amount-wrapper ">
+                                <div class="item-amount "><a href="http://cart.taobao.com/cart.htm?spm=a1z0d.6639537.1997196601.19.VfNOew&from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739" class="J_Minus no-minus" data-spm-anchor-id="a1z0d.6639537.1997196601.19">-</a>
+                                  <input type="text" value="1" class="text text-amount J_ItemAmount" data-max="307" data-now="1" autocomplete="off"><a href="http://cart.taobao.com/cart.htm?spm=a1z0d.6639537.1997196601.20.VfNOew&from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739" class="J_Plus plus" data-spm-anchor-id="a1z0d.6639537.1997196601.20">+</a>
                                 </div>
-                              </li>
-                              <li class="td td-sum">
-                                <div class="td-inner"><em tabindex="0" class="J_ItemSum number">56.50</em>
-                                  <div class="J_ItemLottery"></div>
-                                </div>
-                              </li>
-                              <li class="td td-op">
-                                <div class="td-inner"><a title="移至收藏夹" class="btn-fav J_Fav J_MakePoint" data-point-url="http://www.atpanel.com/jsclick?cache=14186583193711&amp;mycart=collect" href="http://cart.taobao.com/cart.htm?spm=a1z0d.6639537.1997196601.21.VfNOew&from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739" data-spm-anchor-id="a1z0d.6639537.1997196601.21">移入收藏夹</a><a href="javascript:;" data-point-url="http://www.atpanel.com/jsclick?cache=14186583193712&amp;cartlist=delete" class="J_Del J_MakePoint" data-spm-anchor-id="a1z0d.6639537.1997196601.22">删除</a>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
+                                <div class="amount-msg J_AmountMsg"></div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="td td-sum">
+                            <div class="td-inner"><em tabindex="0" class="J_ItemSum number">56.50</em>
+                              <div class="J_ItemLottery"></div>
+                            </div>
+                          </li>
+                          <li class="td td-op">
+                            <div class="td-inner">
+                            <a href="javascript:;" class="J_Del J_MakePoint">删除</a>
+                            </div>
+                          </li>
+                        </ul>
                     </div>
                   </div>
                 </div>
               </div>
-              <div id="J_OrderHolder_s_101450072_1">
+              <div class="J_OrderItem">
                 <div id="J_Order_s_101450072_1" class="J_Order clearfix order-body  ">
                   <div class="J_ItemHead shop clearfix">
                     <div class="shop-info">
                       <span class="shop-icon icon-B"></span>店铺：<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.23.VfNOew&user_number_id=101450072" target="_blank" title="新华文轩网络书店" class="J_MakePoint" data-point="tbcart.8.15" data-spm-anchor-id="a1z0d.6639537.1997196601.23">新华文轩网络书店</a>
-
-
                     </div>
                   </div>
                   <div class="order-content">
                     <div id="J_BundleList_s_101450072_1" class="item-list">
-                      <div id="J_Bundle_s_101450072_1_0" class="bundle  bundle-last ">
-                        <div id="J_ItemHolder_92832956241">
-                          <div id="J_Item_92832956241" class="J_ItemBody item-body clearfix item-normal  first-item  last-item   ">
-                            <ul class="item-content clearfix">
+                      <ul class="item-content clearfix">
                               <li class="td td-chk">
                                 <div class="td-inner">
                                   <div class="cart-checkbox ">
@@ -269,32 +229,25 @@
                                 </div>
                               </li>
                               <li class="td td-op">
-                                <div class="td-inner"><a title="移至收藏夹" class="btn-fav J_Fav J_MakePoint" data-point-url="http://www.atpanel.com/jsclick?cache=14186583193801&amp;mycart=collect" href="http://cart.taobao.com/cart.htm?spm=a1z0d.6639537.1997196601.32.VfNOew&from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739" data-spm-anchor-id="a1z0d.6639537.1997196601.32">移入收藏夹</a><a href="javascript:;" data-point-url="http://www.atpanel.com/jsclick?cache=14186583193802&amp;cartlist=delete" class="J_Del J_MakePoint" data-spm-anchor-id="a1z0d.6639537.1997196601.33">删除</a>
+                                <div class="td-inner">
+                                <a href="javascript:;" class="J_Del J_MakePoint">删除</a>
                                 </div>
                               </li>
                             </ul>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div id="J_OrderHolder_s_217042976_1">
+              <div class="J_OrderItem">
                 <div id="J_Order_s_217042976_1" class="J_Order clearfix order-body  ">
                   <div class="J_ItemHead shop clearfix">
                     <div class="shop-info">
                       <span class="shop-icon icon-B"></span>店铺：<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.34.VfNOew&user_number_id=217042976" target="_blank" title="奥维博世图书专营" class="J_MakePoint" data-point="tbcart.8.15" data-spm-anchor-id="a1z0d.6639537.1997196601.34">奥维博世图书专营</a>
-
-
                     </div>
                   </div>
                   <div class="order-content">
                     <div id="J_BundleList_s_217042976_1" class="item-list">
-                      <div id="J_Bundle_s_217042976_1_0" class="bundle  bundle-last ">
-                        <div id="J_ItemHolder_92931811675">
-                          <div id="J_Item_92931811675" class="J_ItemBody item-body clearfix item-normal  first-item  last-item   ">
-                            <ul class="item-content clearfix">
+                      <ul class="item-content clearfix">
                               <li class="td td-chk">
                                 <div class="td-inner">
                                   <div class="cart-checkbox ">
@@ -357,13 +310,11 @@
                                 </div>
                               </li>
                               <li class="td td-op">
-                                <div class="td-inner"><a title="移至收藏夹" class="btn-fav J_Fav J_MakePoint" data-point-url="http://www.atpanel.com/jsclick?cache=14186583193891&amp;mycart=collect" href="http://cart.taobao.com/cart.htm?spm=a1z0d.6639537.1997196601.43.VfNOew&from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739" data-spm-anchor-id="a1z0d.6639537.1997196601.43">移入收藏夹</a><a href="javascript:;" data-point-url="http://www.atpanel.com/jsclick?cache=14186583193892&amp;cartlist=delete" class="J_Del J_MakePoint" data-spm-anchor-id="a1z0d.6639537.1997196601.44">删除</a>
+                                <div class="td-inner">
+                                <a href="javascript:;" class="J_Del J_MakePoint">删除</a>
                                 </div>
                               </li>
                             </ul>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -380,7 +331,7 @@
                   <input class="J_CheckBoxShop" id="J_SelectAllCbx2" type="checkbox" name="select-all" value="true">
                 </div>&nbsp;全选</div>
               <div class="operations">
-                  <a href="http://cart.taobao.com/cart.htm?spm=a230r.1.1997525049.1.8Dn9s7&from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739#" hidefocus="true" class="J_DeleteSelected">删除</a>
+                  <a href="javascrit:" class="J_DeleteSelected">删除</a>
               </div>
               <div class="float-bar-right">
                 <div id="J_ShowSelectedItems" class="amount-sum"><span class="txt">已选商品</span><em id="J_SelectedItemsCount">0</em><span class="txt">件</span>
@@ -389,7 +340,7 @@
                 </div>
                 <div id="J_CheckCOD" class="check-cod" style="display: none;"><span class="icon-cod"></span><span class="s-checkbox J_CheckCOD"></span>货到付款</div>
                 <div class="pipe"></div>
-                <div class="price-sum"><span class="txt">合计(不含运费)：</span><strong class="price">￥<em id="J_Total">0.00</em></strong>
+                <div class="price-sum"><span class="txt">合计(不含运费)：</span><strong class="price">￥<em class="J_TotalPrice">0.00</em></strong>
                 </div>
                 <div class="btn-area"><a href="javascript:void(0)" id="J_Go" class="submit-btn submit-btn-disabled" aria-label="请注意如果没有选择宝贝，将无法结算"><span>结&nbsp;算</span><b></b></a>
                 </div>
@@ -400,7 +351,5 @@
       </div>
     </div>
   </div>
-
-
 
 </body></html>
