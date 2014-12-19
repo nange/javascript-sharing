@@ -14,3 +14,28 @@ AAXIS内部分享。
 * [javascript中的面向对象](sections/section2/section2.md)
    * [理解prototype](sections/section2/prototype.md)
    * [实例](sections/section2/example.md)
+
+
+## PPT
+
+如果想要查看ppt讲稿，依次执行以下操作：
+```javascript
+npm install -g nodeppt
+````
+
+在本项目根目录下：
+```javascript
+nodeppt start
+````
+选择ppt即可观看。
+
+
+## 实例
+
+可以直接在浏览器中打开example/shoppingCart/shoppngCart.html文件查看demo。
+
+也可以在example目录下执行：
+```javascript
+grunt
+````
+在浏览器中访问：127.0.0.1:8080/shoppingCart/shoppingCart.html
