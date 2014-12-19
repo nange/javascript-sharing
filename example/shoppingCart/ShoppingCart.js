@@ -32,28 +32,55 @@ ShoppingCart.prototype.init = function() {
   });
 
   this.$el.on('change', '.J_CheckBoxItem', function(e) {
+    _this.updateCart();
+  });
+  
+  this.$el.on('input', '.J_ItemAmount', function(e) {
     var $this = $(this);
     var $el = $this.closest(_this.opts.orderItemSel);
-    var selectedCounts = _this.getSelectedItemCounts();
-
-    if ($el.is(':checked')) {
-      if (selectedCounts === _this.getItemCounts()) {
-        _this.checkAll();
-      }
-
-    } else {
-      _this.$checkAll.prop('checked', false);
-      _this.$totalPrice.text(_this.getTotalPrice());
-
-      if (selectedCounts === 0) {
-        _this.$submitBtn.addClass('submit-btn-disabled');
-      }
-    }
-
-    this.$selectedItemCount.text(selectedCounts);
+    var item = new ProductItem($el[0]);
+    var qty = item.getQty();
+    
+    if (qty < 1) item.setQty(1);
+    item.updateQtyStatus();
+    item.updateSumPrice();
+    _this.updateCart();
   });
-
   
+  this.$el.on('click', '.J_Plus, .J_Minus', function(e) {
+    var $this = $(this);
+    var $el = $this.closest(_this.opts.orderItemSel);
+    var item = new ProductItem($el[0]);
+    var qty = item.getQty();
+    
+    if ($this.hasClass('J_Plus')) {
+      item.setQty(qty+1);
+    } else {
+      if (qty == 1) return;
+      item.setQty(qty-1);
+    }
+    item.updateQtyStatus();
+    item.updateSumPrice();
+    _this.updateCart();
+  });
+  
+  this.$el.on('click', '.J_Del', function(e) {
+    var $this = $(this);
+    var $el = $this.closest(_this.opts.orderItemSel);
+    var item = new ProductItem($el[0]);
+    
+    item.remove();
+    _this.updateCart();
+  });
+  
+  this.$el.on('click', '.J_DeleteSelected', function(e) {
+    e.preventDefault();
+    _this.getOrderItems().each(function(index, el) {
+      var item = new ProductItem(el);
+      if (item.isChecked()) item.remove();
+    });
+    _this.updateCart();
+  });
   
 };
 
@@ -64,7 +91,6 @@ ShoppingCart.prototype.checkAll = function() {
   });
   
   var itemCounts = this.getItemCounts();
-
   this.$checkAll.prop('checked', true);
   this.$selectedItemCount.text(itemCounts);
   this.$totalPrice.text(this.getTotalPrice());
@@ -121,4 +147,25 @@ ShoppingCart.prototype.getTotalPrice = function() {
   return total.toFixed(2);
 };
 
-
+ShoppingCart.prototype.updateCart = function() {
+  var _this = this;
+  var itemCounts = _this.getItemCounts();
+  var selectedCounts = _this.getSelectedItemCounts();
+  var totalPrice = _this.getTotalPrice();
+  
+  _this.$itemCount.text(itemCounts);
+  
+  if (selectedCounts === itemCounts && itemCounts != 0) {
+    _this.checkAll();
+    return;
+  } 
+  if (selectedCounts === 0) {
+    _this.uncheckAll();
+    return;
+  }
+  
+  _this.$checkAll.prop('checked', false);
+  _this.$totalPrice.text(totalPrice);
+  _this.$submitBtn.removeClass('submit-btn-disabled');
+  _this.$selectedItemCount.text(selectedCounts);
+};

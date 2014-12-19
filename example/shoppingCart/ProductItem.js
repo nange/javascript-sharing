@@ -6,13 +6,17 @@ var ProductItem = function(el, opts) {
   this.$itemSum = this.$el.find(this.opts.itemSumSel);
   this.$qty = this.$el.find(this.opts.qtySel);
   this.$check = this.$el.find(this.opts.checkSel);
+  this.$minusBtn = this.$el.find(this.opts.minusSel);
+  this.$plusBtn = this.$el.find(this.opts.plusSel);
 };
 
 ProductItem.DEFAULTS = {
   priceSel: '.J_Price',
   itemSumSel: '.J_ItemSum',
   qtySel: '.J_ItemAmount',
-  checkSel: '.J_CheckBoxItem'
+  checkSel: '.J_CheckBoxItem',
+  minusSel: '.J_Minus',
+  plusSel: '.J_Plus'
 };
 
 ProductItem.prototype.getUnitPrice = function() {
@@ -24,11 +28,19 @@ ProductItem.prototype.getSumPrice = function() {
 };
 
 ProductItem.prototype.getQty = function() {
-  return this.$qty.val();
+  return parseInt(this.$qty.val(), 10);
 };
 
 ProductItem.prototype.setQty = function(qty) {
   this.$qty.val(qty);
+};
+
+ProductItem.prototype.updateQtyStatus = function() {
+  if (this.getQty() > 1) {
+    this.$minusBtn.removeClass('no-minus');
+  } else {
+    this.$minusBtn.addClass('no-minus');
+  }
 };
 
 ProductItem.prototype.remove = function() {
@@ -36,7 +48,8 @@ ProductItem.prototype.remove = function() {
 };
 
 ProductItem.prototype.updateSumPrice = function() {
-  this.$itemSum.text(this.getUnitPrice()*this.getQty());
+  var sumPrice = parseFloat(this.getUnitPrice()*this.getQty(), 10).toFixed(2);
+  this.$itemSum.text(sumPrice);
 };
 
 ProductItem.prototype.isChecked = function() {
