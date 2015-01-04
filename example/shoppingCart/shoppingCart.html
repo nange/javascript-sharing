@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0069)file:///home/nange/%E6%A1%8C%E9%9D%A2/shoppingCart/shoppingCart2.html -->
-<html class="ks-webkit537 ks-webkit ks-chrome39 ks-chrome ks-webkit537 ks-webkit ks-chrome39 ks-chrome"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
-
+<html class="ks-webkit537 ks-webkit ks-chrome39 ks-chrome ks-webkit537 ks-webkit ks-chrome39 ks-chrome">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf8">
   <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7">
-  <title>�Ա��� - �ҵĹ��ﳵ</title>
-  <meta charset="gbk">
+  <title>淘宝网 - 我的购物车</title>
+  <meta charset="utf8">
   <link href="http://www.taobao.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <!-- S GLOBAL CSS -->
   <link rel="stylesheet" href="http://g.tbcdn.cn/tb/global/3.3.14/global-min.css">
@@ -21,11 +21,11 @@
       left: 0;
       top: 0;
   }
+  #page {
+    padding-bottom: 100px;
+  }
   </style>
-  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="ProductItem.js"></script>
-  <script src="ShoppingCart.js"></script>
-  <script src="main.js"></script>
+  <script src="js/lib/require.js" data-main="js/main"></script>
 </head>
 
 <body data-spm="6639537" class="cart-taobao ">
@@ -33,7 +33,7 @@
     <div id="content">
       <div id="J_Header" class="header tb-header">
         <h1 id="logo" class="cart-logo">
-          <a href="http://1212.taobao.com/" title="�Ա��� Taobao.com - ����Ͱ�������վ" target="_top">�Ա���</a>
+          <a href="http://1212.taobao.com/" title="淘宝网 Taobao.com - 阿里巴巴旗下网站" target="_top">淘宝网</a>
         </h1>
       </div>
       <div class="cart-layout-TB">
@@ -41,10 +41,10 @@
           <div id="J_FilterBar" class="cart-filter-bar">
             <ul id="J_CartSwitch" class="switch-cart">
               <li class="btn-switch-cart switch-cart-0 current">
-              <a href="javascript:" class="J_MakePoint"><em>ȫ����Ʒ</em><span class="number">3</span><span class="pipe"></span></a>
+              <a href="javascript:" class="J_MakePoint"><em>全部商品</em><span class="number">3</span><span class="pipe"></span></a>
               </li>
             </ul>
-            <div class="cart-sum">��ѡ��Ʒ(�����˷�)��<strong class="price">��<em class="J_TotalPrice">0.00</em></strong><a id="J_SmallSubmit" class="submit-btn submit-btn-disabled">��&nbsp;��</a>
+            <div class="cart-sum">已选商品(不含运费)：<strong class="price">￥<em class="J_TotalPrice">0.00</em></strong><a id="J_SmallSubmit" class="submit-btn submit-btn-disabled">结&nbsp;算</a>
             </div>
             <div class="wrap-line">
               <div class="floater" style="width: 122px; left: -1px;"></div>
@@ -57,25 +57,25 @@
                   <div id="J_SelectAll1" class="select-all J_SelectAll">
                     <div class="cart-checkbox">
                       <input class="J_CheckBoxShop" id="J_SelectAllCbx1" type="checkbox" name="select-all" value="true">
-                    </div>&nbsp;&nbsp;ȫѡ</div>
+                    </div>&nbsp;&nbsp;全选</div>
                 </div>
                 <div class="th th-item">
-                  <div class="td-inner">��Ʒ��Ϣ</div>
+                  <div class="td-inner">商品信息</div>
                 </div>
                 <div class="th th-info">
                   <div class="td-inner">&nbsp;</div>
                 </div>
                 <div class="th th-price">
-                  <div class="td-inner">���ۣ�Ԫ��</div>
+                  <div class="td-inner">单价（元）</div>
                 </div>
                 <div class="th th-amount">
-                  <div class="td-inner">����</div>
+                  <div class="td-inner">数量</div>
                 </div>
                 <div class="th th-sum">
-                  <div class="td-inner">��Ԫ��</div>
+                  <div class="td-inner">金额（元）</div>
                 </div>
                 <div class="th th-op">
-                  <div class="td-inner">����</div>
+                  <div class="td-inner">操作</div>
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@
                 <div id="J_Order_s_1020536390_1" class="J_Order clearfix order-body  ">
                   <div class="J_ItemHead shop clearfix">
                     <div class="shop-info">
-                      <span class="shop-icon icon-B"></span>���̣�<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.12.VfNOew&user_number_id=1020536390" target="_blank" title="�ƾ���ͼ��רӪ��" class="J_MakePoint">�ƾ���ͼ��רӪ��</a>
+                      <span class="shop-icon icon-B"></span>店铺：<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.12.VfNOew&user_number_id=1020536390" target="_blank" title="云聚算图书专营店" class="J_MakePoint">云聚算图书专营店</a>
                     </div>
                   </div>
                   <div class="order-content">
@@ -104,17 +104,17 @@
                                 </a>
                               </div>
                               <div class="item-info">
-                                <div class="item-basic-info"> <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.15.VfNOew&id=26466284401" target="_blank" class="item-title J_MakePoint" data-point="tbcart.8.11" data-spm-anchor-id="a1z0d.6639537.1997196601.15">���ʣ�Go���Գ������ һ��Ȩ����Go���Բο��ֲ� go���Խ̳��鼮</a>                                      </div>
+                                <div class="item-basic-info"> <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.15.VfNOew&id=26466284401" target="_blank" class="item-title J_MakePoint" data-point="tbcart.8.11" data-spm-anchor-id="a1z0d.6639537.1997196601.15">包邮！Go语言程序设计 一本权威的Go语言参考手册 go语言教程书籍</a>                                      </div>
                                 <div class="item-other-info">
                                   <div class="promo-logos"></div>
                                   <div class="item-icon-list clearfix">
                                     <div class="item-icons J_ItemIcons  item-icons-fixed ">
-                                      <a href="http://www.tmall.com/market/mall/qttk.php?spm=a1z0d.6639537.1997196601.16.VfNOew" target="_blank" class="item-icon item-icon-0 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ7���˻�" data-spm-anchor-id="a1z0d.6639537.1997196601.16"><img src="./shoppingCart_files/T1Vyl6FCBlXXaSQP_X-16-16.png" alt="�����˻�">
+                                      <a href="http://www.tmall.com/market/mall/qttk.php?spm=a1z0d.6639537.1997196601.16.VfNOew" target="_blank" class="item-icon item-icon-0 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺7天退换" data-spm-anchor-id="a1z0d.6639537.1997196601.16"><img src="./shoppingCart_files/T1Vyl6FCBlXXaSQP_X-16-16.png" alt="七天退换">
                                       </a>
-                                      <a href="http://www.taobao.com/go/act/315/xfzbz_rsms.php?spm=a1z0d.6639537.1997196601.17.VfNOew&ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-1 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ��ʵ����" data-spm-anchor-id="a1z0d.6639537.1997196601.17"><img src="./shoppingCart_files/T1BCidFrNlXXaSQP_X-16-16.png" alt="��ʵ����">
+                                      <a href="http://www.taobao.com/go/act/315/xfzbz_rsms.php?spm=a1z0d.6639537.1997196601.17.VfNOew&ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-1 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺如实描述" data-spm-anchor-id="a1z0d.6639537.1997196601.17"><img src="./shoppingCart_files/T1BCidFrNlXXaSQP_X-16-16.png" alt="如实描述">
                                       </a>
-                                      <a href="http://www.taobao.com/go/act/315/xfzbz_jyps.php?spm=a1z0d.6639537.1997196601.18.VfNOew&ad_id=&am_id=1300118304240d56fca9&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-2 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ��һ����" data-spm-anchor-id="a1z0d.6639537.1997196601.18"><img src="./shoppingCart_files/T1N5kmFSpbXXaSQP_X-16-16.png" alt="��һ����">
-                                      </a><span class="item-icon item-icon-3" title="֧�����ÿ�֧��"><img src="./shoppingCart_files/T1uxT.FIXaXXaSQP_X-16-16.png" alt=""></span>
+                                      <a href="http://www.taobao.com/go/act/315/xfzbz_jyps.php?spm=a1z0d.6639537.1997196601.18.VfNOew&ad_id=&am_id=1300118304240d56fca9&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-2 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺假一赔三" data-spm-anchor-id="a1z0d.6639537.1997196601.18"><img src="./shoppingCart_files/T1N5kmFSpbXXaSQP_X-16-16.png" alt="假一赔三">
+                                      </a><span class="item-icon item-icon-3" title="支持信用卡支付"><img src="./shoppingCart_files/T1uxT.FIXaXXaSQP_X-16-16.png" alt=""></span>
                                     </div>
                                   </div>
                                 </div>
@@ -153,7 +153,7 @@
                           </li>
                           <li class="td td-op">
                             <div class="td-inner">
-                            <a href="javascript:;" class="J_Del J_MakePoint">ɾ��</a>
+                            <a href="javascript:;" class="J_Del J_MakePoint">删除</a>
                             </div>
                           </li>
                         </ul>
@@ -165,7 +165,7 @@
                 <div id="J_Order_s_101450072_1" class="J_Order clearfix order-body  ">
                   <div class="J_ItemHead shop clearfix">
                     <div class="shop-info">
-                      <span class="shop-icon icon-B"></span>���̣�<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.23.VfNOew&user_number_id=101450072" target="_blank" title="�»������������" class="J_MakePoint" data-point="tbcart.8.15" data-spm-anchor-id="a1z0d.6639537.1997196601.23">�»������������</a>
+                      <span class="shop-icon icon-B"></span>店铺：<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.23.VfNOew&user_number_id=101450072" target="_blank" title="新华文轩网络书店" class="J_MakePoint" data-point="tbcart.8.15" data-spm-anchor-id="a1z0d.6639537.1997196601.23">新华文轩网络书店</a>
                     </div>
                   </div>
                   <div class="order-content">
@@ -185,17 +185,17 @@
                               </a>
                             </div>
                             <div class="item-info">
-                              <div class="item-basic-info"> <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.26.VfNOew&id=19951072136" target="_blank" class="item-title J_MakePoint" data-point="tbcart.8.11" data-spm-anchor-id="a1z0d.6639537.1997196601.26">Go���Ա�� ��ʽΰ  ���������  �»�������泩���鼮  ������</a>                                      </div>
+                              <div class="item-basic-info"> <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.26.VfNOew&id=19951072136" target="_blank" class="item-title J_MakePoint" data-point="tbcart.8.11" data-spm-anchor-id="a1z0d.6639537.1997196601.26">Go语言编程 许式伟  计算机开发  新华书店正版畅销书籍  文轩网</a>                                      </div>
                               <div class="item-other-info">
                                 <div class="promo-logos"></div>
                                 <div class="item-icon-list clearfix">
                                   <div class="item-icons J_ItemIcons  item-icons-fixed ">
-                                    <a href="http://www.tmall.com/market/mall/qttk.php?spm=a1z0d.6639537.1997196601.27.VfNOew" target="_blank" class="item-icon item-icon-0 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ7���˻�" data-spm-anchor-id="a1z0d.6639537.1997196601.27"><img src="./shoppingCart_files/T1Vyl6FCBlXXaSQP_X-16-16.png" alt="�����˻�">
+                                    <a href="http://www.tmall.com/market/mall/qttk.php?spm=a1z0d.6639537.1997196601.27.VfNOew" target="_blank" class="item-icon item-icon-0 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺7天退换" data-spm-anchor-id="a1z0d.6639537.1997196601.27"><img src="./shoppingCart_files/T1Vyl6FCBlXXaSQP_X-16-16.png" alt="七天退换">
                                     </a>
-                                    <a href="http://www.taobao.com/go/act/315/xfzbz_rsms.php?spm=a1z0d.6639537.1997196601.28.VfNOew&ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-1 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ��ʵ����" data-spm-anchor-id="a1z0d.6639537.1997196601.28"><img src="./shoppingCart_files/T1BCidFrNlXXaSQP_X-16-16.png" alt="��ʵ����">
+                                    <a href="http://www.taobao.com/go/act/315/xfzbz_rsms.php?spm=a1z0d.6639537.1997196601.28.VfNOew&ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-1 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺如实描述" data-spm-anchor-id="a1z0d.6639537.1997196601.28"><img src="./shoppingCart_files/T1BCidFrNlXXaSQP_X-16-16.png" alt="如实描述">
                                     </a>
-                                    <a href="http://www.taobao.com/go/act/315/xfzbz_jyps.php?spm=a1z0d.6639537.1997196601.29.VfNOew&ad_id=&am_id=1300118304240d56fca9&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-2 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ��һ����" data-spm-anchor-id="a1z0d.6639537.1997196601.29"><img src="./shoppingCart_files/T1N5kmFSpbXXaSQP_X-16-16.png" alt="��һ����">
-                                    </a><span class="item-icon item-icon-3" title="֧�����ÿ�֧��"><img src="./shoppingCart_files/T1uxT.FIXaXXaSQP_X-16-16.png" alt=""></span>
+                                    <a href="http://www.taobao.com/go/act/315/xfzbz_jyps.php?spm=a1z0d.6639537.1997196601.29.VfNOew&ad_id=&am_id=1300118304240d56fca9&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-2 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺假一赔三" data-spm-anchor-id="a1z0d.6639537.1997196601.29"><img src="./shoppingCart_files/T1N5kmFSpbXXaSQP_X-16-16.png" alt="假一赔三">
+                                    </a><span class="item-icon item-icon-3" title="支持信用卡支付"><img src="./shoppingCart_files/T1uxT.FIXaXXaSQP_X-16-16.png" alt=""></span>
                                   </div>
                                 </div>
                               </div>
@@ -234,7 +234,7 @@
                         </li>
                         <li class="td td-op">
                           <div class="td-inner">
-                          <a href="javascript:;" class="J_Del J_MakePoint">ɾ��</a>
+                          <a href="javascript:;" class="J_Del J_MakePoint">删除</a>
                           </div>
                         </li>
                       </ul>
@@ -246,7 +246,7 @@
                 <div id="J_Order_s_217042976_1" class="J_Order clearfix order-body  ">
                   <div class="J_ItemHead shop clearfix">
                     <div class="shop-info">
-                      <span class="shop-icon icon-B"></span>���̣�<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.34.VfNOew&user_number_id=217042976" target="_blank" title="��ά����ͼ��רӪ" class="J_MakePoint" data-point="tbcart.8.15" data-spm-anchor-id="a1z0d.6639537.1997196601.34">��ά����ͼ��רӪ</a>
+                      <span class="shop-icon icon-B"></span>店铺：<a href="http://store.taobao.com/shop/view_shop.htm?spm=a1z0d.6639537.1997196601.34.VfNOew&user_number_id=217042976" target="_blank" title="奥维博世图书专营" class="J_MakePoint" data-point="tbcart.8.15" data-spm-anchor-id="a1z0d.6639537.1997196601.34">奥维博世图书专营</a>
                     </div>
                   </div>
                   <div class="order-content">
@@ -266,17 +266,17 @@
                               </a>
                             </div>
                             <div class="item-info">
-                              <div class="item-basic-info"> <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.37.VfNOew&id=42140544829" target="_blank" class="item-title J_MakePoint" data-point="tbcart.8.11" data-spm-anchor-id="a1z0d.6639537.1997196601.37">3804180|Go�������ʵս Go�������ָ�� Go���Եľ��� go���Ի������ go���Ծ���̳� go���Բ�����̷��� go����ԭ�� go�̳�</a>                                      </div>
+                              <div class="item-basic-info"> <a href="http://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.37.VfNOew&id=42140544829" target="_blank" class="item-title J_MakePoint" data-point="tbcart.8.11" data-spm-anchor-id="a1z0d.6639537.1997196601.37">3804180|Go并发编程实战 Go并发编程指南 Go语言的精髓 go语言基础编程 go语言经典教程 go语言并发编程方法 go语言原理 go教程</a>                                      </div>
                               <div class="item-other-info">
                                 <div class="promo-logos"></div>
                                 <div class="item-icon-list clearfix">
                                   <div class="item-icons J_ItemIcons  item-icons-fixed ">
-                                    <a href="http://www.tmall.com/market/mall/qttk.php?spm=a1z0d.6639537.1997196601.38.VfNOew" target="_blank" class="item-icon item-icon-0 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ7���˻�" data-spm-anchor-id="a1z0d.6639537.1997196601.38"><img src="./shoppingCart_files/T1Vyl6FCBlXXaSQP_X-16-16.png" alt="�����˻�">
+                                    <a href="http://www.tmall.com/market/mall/qttk.php?spm=a1z0d.6639537.1997196601.38.VfNOew" target="_blank" class="item-icon item-icon-0 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺7天退换" data-spm-anchor-id="a1z0d.6639537.1997196601.38"><img src="./shoppingCart_files/T1Vyl6FCBlXXaSQP_X-16-16.png" alt="七天退换">
                                     </a>
-                                    <a href="http://www.taobao.com/go/act/315/xfzbz_rsms.php?spm=a1z0d.6639537.1997196601.39.VfNOew&ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-1 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ��ʵ����" data-spm-anchor-id="a1z0d.6639537.1997196601.39"><img src="./shoppingCart_files/T1BCidFrNlXXaSQP_X-16-16.png" alt="��ʵ����">
+                                    <a href="http://www.taobao.com/go/act/315/xfzbz_rsms.php?spm=a1z0d.6639537.1997196601.39.VfNOew&ad_id=&am_id=130011830696bce9eda3&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-1 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺如实描述" data-spm-anchor-id="a1z0d.6639537.1997196601.39"><img src="./shoppingCart_files/T1BCidFrNlXXaSQP_X-16-16.png" alt="如实描述">
                                     </a>
-                                    <a href="http://www.taobao.com/go/act/315/xfzbz_jyps.php?spm=a1z0d.6639537.1997196601.40.VfNOew&ad_id=&am_id=1300118304240d56fca9&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-2 J_MakePoint" data-point="tbcart.8.26" title="�����߱��Ϸ������ҳ�ŵ��һ����" data-spm-anchor-id="a1z0d.6639537.1997196601.40"><img src="./shoppingCart_files/T1N5kmFSpbXXaSQP_X-16-16.png" alt="��һ����">
-                                    </a><span class="item-icon item-icon-3" title="֧�����ÿ�֧��"><img src="./shoppingCart_files/T1uxT.FIXaXXaSQP_X-16-16.png" alt=""></span>
+                                    <a href="http://www.taobao.com/go/act/315/xfzbz_jyps.php?spm=a1z0d.6639537.1997196601.40.VfNOew&ad_id=&am_id=1300118304240d56fca9&cm_id=&pm_id=" target="_blank" class="item-icon item-icon-2 J_MakePoint" data-point="tbcart.8.26" title="消费者保障服务，卖家承诺假一赔三" data-spm-anchor-id="a1z0d.6639537.1997196601.40"><img src="./shoppingCart_files/T1N5kmFSpbXXaSQP_X-16-16.png" alt="假一赔三">
+                                    </a><span class="item-icon item-icon-3" title="支持信用卡支付"><img src="./shoppingCart_files/T1uxT.FIXaXXaSQP_X-16-16.png" alt=""></span>
                                   </div>
                                 </div>
                               </div>
@@ -317,7 +317,7 @@
                         </li>
                         <li class="td td-op">
                           <div class="td-inner">
-                          <a href="javascript:;" class="J_Del J_MakePoint">ɾ��</a>
+                          <a href="javascript:;" class="J_Del J_MakePoint">删除</a>
                           </div>
                         </li>
                       </ul>
@@ -335,20 +335,23 @@
               <div id="J_SelectAll2" class="select-all J_SelectAll">
                 <div class="cart-checkbox">
                   <input class="J_CheckBoxShop" id="J_SelectAllCbx2" type="checkbox" name="select-all" value="true">
-                </div>&nbsp;ȫѡ</div>
+                </div>&nbsp;全选</div>
               <div class="operations">
-                  <a href="javascrit:" class="J_DeleteSelected">ɾ��</a>
+                  <a href="javascrit:" class="J_DeleteSelected">删除</a>
               </div>
               <div class="float-bar-right">
-                <div id="J_ShowSelectedItems" class="amount-sum"><span class="txt">��ѡ��Ʒ</span><em id="J_SelectedItemsCount">0</em><span class="txt">��</span>
+                <div id="J_ShowSelectedItems" class="amount-sum"><span class="txt">已选商品</span><em id="J_SelectedItemsCount">0</em><span class="txt">件</span>
                   <div class="arrow-box"><span class="selected-items-arrow"></span><span class="arrow"></span>
                   </div>
                 </div>
-                <div id="J_CheckCOD" class="check-cod" style="display: none;"><span class="icon-cod"></span><span class="s-checkbox J_CheckCOD"></span>��������</div>
+                <div id="J_CheckCOD" class="check-cod" style="display: none;"><span class="icon-cod"></span><span class="s-checkbox J_CheckCOD"></span>货到付款</div>
                 <div class="pipe"></div>
-                <div class="price-sum"><span class="txt">�ϼ�(�����˷�)��</span><strong class="price">��<em class="J_TotalPrice">0.00</em></strong>
+                <div class="price-sum"><span class="txt">合计(不含运费)：</span><strong class="price">￥<em class="J_TotalPrice">0.00</em></strong>
                 </div>
-                <div class="btn-area"><a href="javascript:void(0)" id="J_Go" class="submit-btn submit-btn-disabled" aria-label="��ע�����û��ѡ�񱦱������޷�����"><span>��&nbsp;��</span><b></b></a>
+                <div class="btn-area">
+                  <a href="javascript:void(0)" id="J_Go" class="submit-btn submit-btn-disabled">
+                    <span>结&nbsp;算</span><b></b>
+                  </a>
                 </div>
               </div>
             </div>
@@ -358,4 +361,5 @@
     </div>
   </div>
 
-</body></html>
+</body>
+</html>
