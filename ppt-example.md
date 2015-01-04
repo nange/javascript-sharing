@@ -12,11 +12,9 @@ author: Lanceli
 
 [slide]
 
-# 面向对象的核心 
-----
+# 面向对象的核心 {:&.flexbox.vleft}
+
 抽象和接口
-
-
 
 
 
