@@ -301,6 +301,14 @@ $.ajax({
 });
 ```
 
+[slide]
+
+Promise 更加完整的用法和事例请查看:
+
+```html
+github.com/nange/Promise-Deferred-Demo
+```
+
 
 [slide]
 
@@ -347,5 +355,10 @@ define(['jquery'], function($) {
 }
 ```
 
+[slide]
 
+Requirejs 更加完整的用法和事例请查看:
 
+```html
+github.com/nange/requirejs-guide
+```
