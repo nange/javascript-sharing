@@ -243,6 +243,60 @@ ShoppingCart.prototype.init = function() {
 
 [slide]
 
+# 补充:理解requirejs的执行逻辑 {:&.flexbox.vleft}
+
+理解requirejs的加载和执行流程, 可以极大的减少很多离奇bug.
+
+[slide]
+
+引入js:
+```html
+<script src="js/lib/require.js" data-main="js/main"></script>
+```
+
+main 入口:
+```javascript
+require(['config'], function() {
+require(['jquery', 'ShoppingCart'], function($, ShoppingCart) {
+  // 初始化ShoppingCart
+  $(function() {
+    var cart = new ShoppingCart();  
+    cart.init();
+  });
+  
+});
+});
+```
+
+[slide]
+
+ShoppingCart.js:
+```javascript
+define(['jquery', 'ProductItem'], function($, ProductItem) {
+  // do sth...
+  return ShoppingCart;
+}
+```
+
+ProductItem.js:
+```javascript
+define(['jquery'], function($) {
+  // do sth...
+  return ProductItem;
+}
+```
+
+[slide]
+
+Requirejs 更加完整的用法和事例请查看:
+
+```html
+github.com/nange/requirejs-guide
+```
+
+
+[slide]
+
 # 补充:如何编写异步代码 {:&.flexbox.vleft}
 
 javascript中的IO,默认都是异步的(why?).
@@ -310,55 +364,4 @@ github.com/nange/Promise-Deferred-Demo
 ```
 
 
-[slide]
 
-# 补充:理解requirejs的执行逻辑 {:&.flexbox.vleft}
-
-理解requirejs的加载和执行流程, 可以极大的减少很多离奇bug.
-
-[slide]
-
-引入js:
-```html
-<script src="js/lib/require.js" data-main="js/main"></script>
-```
-
-main 入口:
-```javascript
-require(['config'], function() {
-require(['jquery', 'ShoppingCart'], function($, ShoppingCart) {
-  // 初始化ShoppingCart
-  $(function() {
-    var cart = new ShoppingCart();  
-    cart.init();
-  });
-  
-});
-});
-```
-
-[slide]
-
-ShoppingCart.js:
-```javascript
-define(['jquery', 'ProductItem'], function($, ProductItem) {
-	// do sth...
-	return ShoppingCart;
-}
-```
-
-ProductItem.js:
-```javascript
-define(['jquery'], function($) {
-	// do sth...
-	return ProductItem;
-}
-```
-
-[slide]
-
-Requirejs 更加完整的用法和事例请查看:
-
-```html
-github.com/nange/requirejs-guide
-```
