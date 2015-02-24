@@ -43,6 +43,21 @@ transition: move
 
 [slide]
 
+## 一个简单的服务器例子
+----
+向客户端输出Hello World
+```javascript
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('<h1>Hello World</h1>');
+}).listen(80, '127.0.0.1');
+console.log('Server running at http://127.0.0.1/');
+```
+
+
+[slide]
+
 # Npm {:&.flexbox.vleft}
 
 >#### npm is the package manager for javascript.
