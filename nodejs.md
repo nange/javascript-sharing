@@ -64,14 +64,53 @@ console.log('Server running at http://127.0.0.1/');
 
 >#### www.npmjs.com
 
+>package.json
+
 
 [slide]
 
 # Gulp
-## 前端工程化利器！
+## 前端工程化利器！(对比grunt)
 
 
 [slide]
-# Gulp的服务端配置
 
-prefix = /home/nange/npm-packages
+# 安装
+----
+全局安装Gulp(命令行工具):
+```
+npm install -g gulp
+```
+
+项目里面安装Gulp:
+```
+npm install --save-dev gulp
+```
+
+[slide]
+
+# 创建Gulp任务
+----
+gulpfile.js是定义任务的地方，以压缩js为例：
+```
+var gulp = require('gulp'),
+   uglify = require('gulp-uglify');
+
+gulp.task('minify', function () {
+   gulp.src('js/app.js')
+      .pipe(uglify())
+      .pipe(gulp.dest('build'))
+});
+```
+
+
+[slide]
+# 补充：Gulp的服务端配置
+##服务器端可能遇到的问题：无法使用sudo权限
+
+
+解决办法：手动配置指定全局包路径
+
+```
+npm config set prefix /home/username/npm-packages
+```

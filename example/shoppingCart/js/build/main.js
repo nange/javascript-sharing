@@ -1,0 +1,1 @@
+require(["config"],function(){require(["jquery","ShoppingCart"],function(n,i){n(function(){var n=new i;n.init()})})});
