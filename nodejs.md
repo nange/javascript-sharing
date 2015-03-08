@@ -6,8 +6,24 @@ transition: move
 
 [slide]
 
-# Nodejs、Npm、Gulp
+# Nodejs
 <small>author：LanceLi</small>
+
+
+[slide]
+# List {:&.flexbox.vleft}
+
+* Nodejs是什么
+* Nodejs底层模型
+* Nodejs适用场景
+* NPM
+* 前端工程化(Gulp)
+
+
+[slide]
+
+# Nodejs是什么 {:&.flexbox.vleft}
+Node.js® is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient
 
 
 [slide]
@@ -38,8 +54,7 @@ transition: move
 ----
 * IO密集型（不适合计算密集型） {:&.moveIn}
 * 和其他系统集成，作为胶合层
-* 前端工程化
-
+* 前端工程化(Gulp)
 
 [slide]
 
