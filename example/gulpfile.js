@@ -11,3 +11,7 @@ gulp.task('minify', function () {
 gulp.task('connect', function() {
   connect.server();
 });
+
+gulp.task('watch', function() {
+	gulp.watch('shoppingCart/js/main.js', ['minify'])
+});
