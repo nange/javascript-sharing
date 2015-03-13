@@ -1,0 +1,15 @@
+.header-box {
+	border: 1px solid #e8e8e8;
+}
+
+body {
+	background-color: #fff;
+}
+
+#top {
+	margin-bottom: 20px;
+}
+
+.wrap {
+	width: 720px;
+}
