@@ -1,17 +1,163 @@
 <!doctype html>
 <html ng-app>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	<title>ACMC POC</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>ACMC POC</title>
 
-	<link rel="stylesheet" href="css/main.css">
-    <script src="js/lib/angular.js"></script>
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/angular.js"></script>
 </head>
+
 <body>
-    
+  <header id="top">
+    <div class="container">
+      <div class="header-box">
+        <a href="/">
+          <img src="img/logo.png">
+        </a>
+      </div>
+    </div>
+  </header>
 
+  <main class="container">
+    <div class="wrap">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">USER SEARCH CRITERIA</h3>
+        </div>
+        <div class="panel-body">
+          <form class="form-horizontal" action="" method="post">
+            <div class="form-group">
+              <label for="userno" class="col-md-4">User Number</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="userno">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-md-4">Email Address</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="col-md-4">First Name</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="firstname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lastname" class="col-md-4">Last name</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="lastname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phoneno" class="col-md-4">Phone Number</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="phoneno">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mcn" class="col-md-4">Master Customer Name</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="mcn">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-8 col-md-offset-4">
+                <button class="btn btn-success">Search</button>
+                <div class="space"></div>
+                <button class="btn btn-warning">Clear</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
 
+      <div class="panel panel-default table-dynamic">
+        <div class="panel-heading">
+          <h3 class="panel-title">USER SEARCH RESULTS</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-bordered table-striped table-responsive">
+            <thead>
+              <tr>
+                <th>
+                  <div class="th">
+                    Store Name
+                    <span class="glyphicon glyphicon-chevron-up" data-ng-click=" order('name') " data-ng-class="{active: row == 'name'}"></span>
+                    <span class="glyphicon glyphicon-chevron-down active" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    Price
+                    <span class="glyphicon glyphicon-chevron-up" data-ng-click=" order('price') " data-ng-class="{active: row == 'price'}"></span>
+                    <span class="glyphicon glyphicon-chevron-down" data-ng-click=" order('-price') " data-ng-class="{active: row == '-price'}"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    Sales (in 30 days)
+                    <span class="glyphicon glyphicon-chevron-up" data-ng-click=" order('sales') " data-ng-class="{active: row == 'sales'}"></span>
+                    <span class="glyphicon glyphicon-chevron-down" data-ng-click=" order('-sales') " data-ng-class="{active: row == '-sales'}"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    Rating
+                    <span class="glyphicon glyphicon-chevron-up" data-ng-click=" order('rating') " data-ng-class="{active: row == 'rating'}"></span>
+                    <span class="glyphicon glyphicon-chevron-down" data-ng-click=" order('-rating') " data-ng-class="{active: row == '-rating'}"></span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ng-binding">The Milk Pail Market</td>
+                <td class="ng-binding">$</td>
+                <td class="ng-binding">543</td>
+                <td class="ng-binding">4.5</td>
+              </tr>
+              <tr>
+                <td class="ng-binding">Tea Era</td>
+                <td class="ng-binding">$</td>
+                <td class="ng-binding">874</td>
+                <td class="ng-binding">4</td>
+              </tr>
+              <tr>
+                <td class="ng-binding">Tapioca Express</td>
+                <td class="ng-binding">$</td>
+                <td class="ng-binding">301</td>
+                <td class="ng-binding">3</td>
+              </tr>
+              <tr>
+                <td class="ng-binding">Sufi Coffee Shop</td>
+                <td class="ng-binding">$</td>
+                <td class="ng-binding">113</td>
+                <td class="ng-binding">3.3</td>
+              </tr>
+              <tr>
+                <td class="ng-binding">Starbucks</td>
+                <td class="ng-binding">$$</td>
+                <td class="ng-binding">97</td>
+                <td class="ng-binding">3.7</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
 </body>
+
 </html>
