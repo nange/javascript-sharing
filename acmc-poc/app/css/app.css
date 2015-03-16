@@ -2,6 +2,10 @@
 	border: 1px solid #e8e8e8;
 }
 
+html {
+	overflow: auto;
+}
+
 body {
 	background-color: #fff;
 }
@@ -11,5 +15,10 @@ body {
 }
 
 .wrap {
-	width: 720px;
+	width: 850px;
+}
+
+#footer {
+	min-height: 1px;
+	margin-bottom: 50px;
 }

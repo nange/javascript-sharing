@@ -1,0 +1,42 @@
+[
+	{
+		"userno": 123455,
+		"email": "abc@abc123.com",
+		"firstname": "lance",
+		"lastname": "li",
+		"phoneno": "13558617186",
+		"mcn": "Master Customer Name1"
+	},
+	{
+		"userno": 2354542,
+		"email": "abc123@abc123.com",
+		"firstname": "lance22",
+		"lastname": "li3",
+		"phoneno": "13558617186",
+		"mcn": "Master Customer Name2"
+	},
+	{
+		"userno": 42343435,
+		"email": "ab4c23@abc123.com",
+		"firstname": "lance333",
+		"lastname": "li33",
+		"phoneno": "13558617186",
+		"mcn": "Master Customer Name3"
+	},
+	{
+		"userno": 23546577,
+		"email": "abc111@abc123.com",
+		"firstname": "lance44",
+		"lastname": "li4",
+		"phoneno": "13558617186",
+		"mcn": "Master Customer Name4"
+	},
+	{
+		"userno": 9876644,
+		"email": "abc895@abc123.com",
+		"firstname": "lance55",
+		"lastname": "li5",
+		"phoneno": "13558617186",
+		"mcn": "Master Customer Name5"
+	}
+]

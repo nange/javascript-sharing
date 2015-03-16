@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="pocModule">
 
 <head>
   <meta charset="utf-8">
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/app.css">
   <script src="js/lib/jquery.js"></script>
   <script src="js/lib/angular.js"></script>
+
+  <script src="js/app.js"></script>
 </head>
 
 <body>
@@ -26,7 +28,7 @@
   </header>
 
   <main class="container">
-    <div class="wrap">
+    <div class="wrap" ng-controller="searchUserCtrl">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">USER SEARCH CRITERIA</h3>
@@ -36,120 +38,111 @@
             <div class="form-group">
               <label for="userno" class="col-md-4">User Number</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="userno">
+                <input type="text" class="form-control" id="userno" ng-model="user.userno">
               </div>
             </div>
             <div class="form-group">
               <label for="email" class="col-md-4">Email Address</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="email">
+                <input type="text" class="form-control" id="email" ng-model="user.email">
               </div>
             </div>
             <div class="form-group">
               <label for="firstname" class="col-md-4">First Name</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="firstname">
+                <input type="text" class="form-control" id="firstname" ng-model="user.firstname">
               </div>
             </div>
             <div class="form-group">
               <label for="lastname" class="col-md-4">Last name</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="lastname">
+                <input type="text" class="form-control" id="lastname" ng-model="user.lastname">
               </div>
             </div>
             <div class="form-group">
               <label for="phoneno" class="col-md-4">Phone Number</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="phoneno">
+                <input type="text" class="form-control" id="phoneno" ng-model="user.phoneno">
               </div>
             </div>
             <div class="form-group">
               <label for="mcn" class="col-md-4">Master Customer Name</label>
               <div class="col-md-8">
-                <input type="text" class="form-control" id="mcn">
+                <input type="text" class="form-control" id="mcn" ng-model="user.mcn">
               </div>
             </div>
             <div class="form-group">
               <div class="col-md-8 col-md-offset-4">
-                <button class="btn btn-success">Search</button>
+                <button class="btn btn-success" ng-click="search()">Search</button>
                 <div class="space"></div>
-                <button class="btn btn-warning">Clear</button>
+                <button class="btn btn-warning" ng-click="reset()">Clear</button>
               </div>
             </div>
           </form>
         </div>
       </div>
 
-      <div class="panel panel-default table-dynamic">
+      <div class="panel panel-default table-dynamic" ng-show="show">
         <div class="panel-heading">
           <h3 class="panel-title">USER SEARCH RESULTS</h3>
         </div>
         <div class="panel-body">
-          <table class="table table-bordered table-striped table-responsive">
+          <table class="table table-bordered table-responsive">
             <thead>
               <tr>
                 <th>
                   <div class="th">
-                    Store Name
-                    <span class="glyphicon glyphicon-chevron-up" data-ng-click=" order('name') " data-ng-class="{active: row == 'name'}"></span>
-                    <span class="glyphicon glyphicon-chevron-down active" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
+                    User Number
+                    <span class="glyphicon glyphicon-chevron-up" ng-click="order('userno')" ng-class="{active: row == 'userno'}"></span>
+                    <span class="glyphicon glyphicon-chevron-down" ng-click="order('-userno')" ng-class="{active: row == '-userno'}"></span>
                   </div>
                 </th>
                 <th>
                   <div class="th">
-                    Price
-                    <span class="glyphicon glyphicon-chevron-up" data-ng-click=" order('price') " data-ng-class="{active: row == 'price'}"></span>
-                    <span class="glyphicon glyphicon-chevron-down" data-ng-click=" order('-price') " data-ng-class="{active: row == '-price'}"></span>
+                    Email Address
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
                   </div>
                 </th>
                 <th>
                   <div class="th">
-                    Sales (in 30 days)
-                    <span class="glyphicon glyphicon-chevron-up" data-ng-click=" order('sales') " data-ng-class="{active: row == 'sales'}"></span>
-                    <span class="glyphicon glyphicon-chevron-down" data-ng-click=" order('-sales') " data-ng-class="{active: row == '-sales'}"></span>
+                    First Name
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
                   </div>
                 </th>
                 <th>
                   <div class="th">
-                    Rating
-                    <span class="glyphicon glyphicon-chevron-up" data-ng-click=" order('rating') " data-ng-class="{active: row == 'rating'}"></span>
-                    <span class="glyphicon glyphicon-chevron-down" data-ng-click=" order('-rating') " data-ng-class="{active: row == '-rating'}"></span>
+                    Last name
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    Phone Number
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    Master Customer Name
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
                   </div>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="ng-binding">The Milk Pail Market</td>
-                <td class="ng-binding">$</td>
-                <td class="ng-binding">543</td>
-                <td class="ng-binding">4.5</td>
+              <tr ng-repeat="user in results | orderBy: order">
+                <td>{{user.userno}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.phoneno}}</td>
+                <td>{{user.mcn}}</td>
               </tr>
-              <tr>
-                <td class="ng-binding">Tea Era</td>
-                <td class="ng-binding">$</td>
-                <td class="ng-binding">874</td>
-                <td class="ng-binding">4</td>
-              </tr>
-              <tr>
-                <td class="ng-binding">Tapioca Express</td>
-                <td class="ng-binding">$</td>
-                <td class="ng-binding">301</td>
-                <td class="ng-binding">3</td>
-              </tr>
-              <tr>
-                <td class="ng-binding">Sufi Coffee Shop</td>
-                <td class="ng-binding">$</td>
-                <td class="ng-binding">113</td>
-                <td class="ng-binding">3.3</td>
-              </tr>
-              <tr>
-                <td class="ng-binding">Starbucks</td>
-                <td class="ng-binding">$$</td>
-                <td class="ng-binding">97</td>
-                <td class="ng-binding">3.7</td>
-              </tr>
-
             </tbody>
           </table>
         </div>
@@ -157,7 +150,7 @@
     </div>
   </main>
 
-  <footer></footer>
+  <footer id="footer"></footer>
 </body>
 
 </html>
