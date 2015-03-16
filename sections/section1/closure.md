@@ -64,3 +64,8 @@ var fn = function() {
 #### 最佳实践
 
 1. 使用立即调用函数表达式创建局部作用域
+
+
+#### links
+
+* 下一章：[javascript中的面向对象](../section2/section2.md)
