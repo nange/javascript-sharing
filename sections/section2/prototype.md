@@ -86,3 +86,9 @@ Object.create = function(proto) {
 
 * ### 在原型上定义方法实现
 * ### 把状态定义到实例对象上
+
+
+
+#### links
+
+* 下一章：[实例](example.md)
