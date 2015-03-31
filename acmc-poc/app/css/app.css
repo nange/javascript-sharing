@@ -7,7 +7,11 @@ html {
 }
 
 body {
-	background-color: #fff;
+	background-color: #f3f3f3;
+}
+
+form {
+	float: left;
 }
 
 #top {
@@ -21,4 +25,25 @@ body {
 #footer {
 	min-height: 1px;
 	margin-bottom: 50px;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.wrapper > aside {
+	float: left;
+	width: 220px;
+	min-height: 600px;
+	background-color: #242633;
+}
+
+.wrapper > article {
+	margin-left: 220px;
+}
+
+.ui-select {
+	margin: 0;
 }
