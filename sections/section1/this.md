@@ -119,3 +119,8 @@ person1.say.call(person2); // my name is 李四
 
 而bind函数不同于call和apply。
 bind函数其实是返回一个新函数，而这个新函数中的this值正是用bind的参数来指定的。
+
+
+#### links
+
+* 下一章：[理解闭包](closure.md)

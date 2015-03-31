@@ -27,7 +27,7 @@ npm install -g nodeppt
 ```javascript
 nodeppt start
 ````
-选择ppt即可观看。
+浏览器会自动打开，选择ppt即可观看。比如选择nodejs即可观看nodejs的PPT内容。
 
 
 ## 实例
