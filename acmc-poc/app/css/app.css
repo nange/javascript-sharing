@@ -28,22 +28,32 @@ form {
 }
 
 .wrapper {
-	width: 960px;
+	position: relative;
+	width: 970px;
 	margin: 0 auto;
-	overflow: hidden;
 }
 
-.wrapper > aside {
-	float: left;
+#nav-container {
 	width: 220px;
 	min-height: 600px;
-	background-color: #242633;
 }
 
 .wrapper > article {
-	margin-left: 220px;
+	position: absolute;
+	top: 50px;
+	left: 220px;
+	right: 0;
+	bottom: 0;
 }
 
 .ui-select {
 	margin: 0;
+}
+
+.top-header .top-nav .nav-right>li>a {
+	width: auto;
+}
+
+.top-header .logo a img {
+	vertical-align: baseline;
 }
