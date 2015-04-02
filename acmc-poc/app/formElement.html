@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>ACMC POC</title>
+  
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<body data-ng-app="app">
+  <div class="wrapper" data-ng-controller="AppCtrl">
+    <header id="header" class="top-header">
+      <div class="logo">
+        <a href="#/">
+          <img src="img/logo.png" alt="">
+        </a>
+      </div>
+      <div class="top-nav clearfix">
+        <ul class="nav-left list-unstyled">
+          <li>
+            <a href="#/" class="toggle-min"><i class="fa fa-bars"></i></a>
+          </li>
+          <li class="dropdown text-normal nav-profile">
+            <a href="javascript:" class="dropdown-toggle">
+              <span>Daniel Seliger</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav-right pull-right list-unstyled">
+          <li class="dropdown">
+            <a href="javascript:" class="dropdown-toggle">
+              <span>Location Finder</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:" class="dropdown-toggle">
+              <span class="glyphicon glyphicon-user"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+		<aside id="nav-container">
+      <div id="nav-wrapper">
+        <ul id="nav" >
+          <li>
+            <a href="#/home"> 
+              <i class="glyphicon glyphicon-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="#/ui"><i class="glyphicon glyphicon-search"></i><span>Search</span></a>
+            <ul style="display: block;">
+              <li class="">
+                <a href="#/ui/buttons"><i class="fa fa-caret-right"></i><span>Master Customer</span></a>
+              </li>
+              <li>
+                <a href="#/ui/typography"><i class="fa fa-caret-right"></i><span>User</span></a>
+              </li>
+              <li>
+                <a href="#/ui/widgets"><i class="fa fa-caret-right"></i><span>Order</span> </a>
+              </li>
+            </ul>
+            <i class="fa fa-caret-right icon-has-ul"></i></li>
+        </ul>
+      </div>
+    </aside>
+		<article >
+			<div class="page">
+				<section class="panel panel-default">
+					<div class="panel-heading">
+						<strong><span class="glyphicon glyphicon-th"></span> Search</strong>
+					</div>
+					<div class="panel-body" style="height: 170px;">
+						<form action="" class="form-horizontal" >
+
+							<div class="form-group">
+                <label for="" class="col-sm-3">Normal Input</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="" class="col-sm-3">Normal Select</label>
+                <div class="col-sm-9">
+                  <span class="ui-select">
+                    <select>
+                      <option value="Mustard">Mustard</option>
+                      <option value="Ketchup">Ketchup</option>
+                      <option value="Barbecue">Barbecue</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group" data-ng-controller="DatepickerDemoCtrl">
+                <label for="" class="col-sm-3">Normal DatePicker</label>
+                <div class="col-sm-9">
+                  <div class="input-group ui-datepicker">
+                    <input type="text" 
+                           class="form-control"
+                           datepicker-popup="{{format}}"
+                           ng-model="dt"
+                           is-open="opened"
+                           min="minDate"
+                           max="'2015-06-22'"
+                           datepicker-options="dateOptions" 
+                           date-disabled="disabled(date, mode)"
+                           ng-required="true" 
+                           close-text="Close">
+                    <span class="input-group-addon" ng-click="open($event)">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+						</form>
+					</div>
+				</section>
+
+        <section class="panel panel-default table-dynamic">
+          <div class="panel-heading">
+            <strong><span class="glyphicon glyphicon-th"></span> Search Result</strong>
+          </div>
+          <div class="table-filters">
+            
+          </div>
+          <table class="table table-bordered table-responsive">
+            <thead>
+              <tr>
+                <th>
+                  <div class="th">
+                    User ID
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    User Email
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    Master Cust
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    Org
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="th">
+                    Order
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>11111111</td>
+                <td>joe@joesplumbing.net</td>
+                <td></td>
+                <td></td>
+                <td>11111111</td>
+              </tr>
+              <tr>
+                <td>22222222</td>
+                <td>info@abcremodel.com</td>
+                <td></td>
+                <td></td>
+                <td>22222222</td>
+              </tr>
+              <tr>
+                <td>33333333</td>
+                <td>kay@abcremodel.com</td>
+                <td>Kitchen krazy</td>
+                <td>Kitchen krazy</td>
+                <td>33333333</td>
+              </tr>
+              <tr>
+                <td>44444444</td>
+                <td>kay@abcremodel2.com</td>
+                <td>Joe's Plumbing 2</td>
+                <td>JS Plumbing 2</td>
+                <td>44444444</td>
+              </tr>
+              <tr>
+                <td>44444444</td>
+                <td>kay@abcremodel2.com</td>
+                <td>Joe's Plumbing 2</td>
+                <td>JS Plumbing 2</td>
+                <td>44444444</td>
+              </tr>
+            </tbody>
+          </table>
+          <footer class="table-footer">
+              <div class="row">
+                <div class="col-md-6 page-num-info">
+                  <span>
+                    Show
+                    <select name="">
+                      <option value="">3</option>
+                      <option value="">5</option>
+                      <option value="">10</option>
+                      <option value="">20</option>
+                    </select>
+                    entries per page
+                  </span>
+                </div>
+                <div class="col-md-6 text-right pagination-container">
+                  <ul class="pagination-sm pagination">
+                    <li class="disabled"><a href="">First</a></li>
+                    <li class="disabled"><a href="">Previous</a></li>
+                    <li class="active"><a href="">1</a></li>
+                    <li class=""><a href="">2</a></li>
+                    <li class=""><a href="">3</a></li>
+                    <li><a href="">Next</a></li>
+                    <li><a href="">Last</a></li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+        </section>
+			</div>
+		</article>
+  </div>
+
+
+  <script src="js/square/vendor.js"></script>
+  <script src="js/square/ui.js"></script>
+  <script src="js/square/app.js"></script>
+  
+
+</body>
+
+</html>
