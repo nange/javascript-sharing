@@ -1,0 +1,22 @@
+{
+  "name": "poc-demo",
+  "version": "1.0.0",
+  "description": "this is a chat demo with socket.io",
+  "main": "chat socket.io angular",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "lanceli",
+  "license": "MIT",
+  "dependencies": {
+    "httpinvoke": "^1.4.0",
+    "koa": "^0.18.1",
+    "koa-better-body": "^1.0.17",
+    "koa-body": "^1.2.0",
+    "koa-body-parser": "^1.1.1",
+    "koa-file-server": "^2.3.0",
+    "koa-router": "^4.2.0",
+    "koa-session": "^3.1.0",
+    "koa-static": "^1.4.9"
+  }
+}
