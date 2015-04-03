@@ -1,24 +1,26 @@
+<%@ include file="/includes/prelude.jspf" %>
+
 <c:set var="form" value="${result}"/>
 
-<div class="page">
+<div class="page" ng-controller="searchCtrl">
 	<section class="panel panel-default">
 		<div class="panel-heading">
 			<strong><span class="glyphicon glyphicon-th"></span>${form.title}</strong>
 		</div>
 		<div class="panel-body">
 			<form action="" class="form-horizontal" >
-				<c:forEach items="form.fields" var="field">
+				<c:forEach items="${form.fields}" var="field" varStatus="vs">
 
 					<div class="form-group">
 						<label for="" class="col-sm-3">${field.label}</label>
 						<div class="col-sm-9">
 							<c:choose>
 							<c:when test="${field.type eq 'text'}">
-								<input type="text" class="form-control" ng-model="${field.name}">
+								<input type="text" class="form-control" ng-model="searchData.searchFields[${vs.index}].value">
 							</c:when>
 							<c:when test="${field.type eq 'select'}">
 								<span class="ui-select">
-									<select ng-model="${field.name}">
+									<select ng-model="searchData.searchFields[${vs.index}].value">
 										<option value="">Empty</option>
 									</select>
 								</span>
@@ -28,7 +30,7 @@
 									<input type="text" 
 										   class="form-control"
 										   datepicker-popup="{{format}}"
-										   ng-model="${field.name}"
+										   ng-model="searchData.searchFields[${vs.index}].value"
 										   is-open="opened"
 										   datepicker-options="dateOptions" 
 										   date-disabled="disabled(date, mode)"
@@ -54,14 +56,14 @@
 		</div>
 	</section>
 
-	<section class="panel panel-default table-dynamic">
+	<section class="panel panel-default table-dynamic" ng-show="show">
 		<div class="panel-heading">
 			<strong><span class="glyphicon glyphicon-th"></span> Search Result</strong>
 		</div>
 		<table class="table table-bordered table-responsive">
 			<thead>
 			  <tr>
-			  	<c:forEach items="form.returnFields" var="returnField">
+			  	<c:forEach items="${form.returnFields}" var="returnField">
 				<th>
 				  <div class="th">
 					${returnField.description}
@@ -72,6 +74,13 @@
 				</c:forEach>
 			  </tr>
 			</thead>
+			<tbody>
+              <tr ng-repeat="result in results">
+              	<c:forEach items="${form.returnFields}" var="returnField">
+                	<td>{{ result.${returnField.name} }}</td>
+                </c:forEach>
+              </tr>
+            </tbody>
 		</table>
 	</section>
 

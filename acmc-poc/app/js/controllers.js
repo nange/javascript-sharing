@@ -2,16 +2,86 @@
 
 var pocController = angular.module('pocController', []);
 
-pocController.controller('searchUserCtrl', ['$scope', '$http', function($scope, $http) {
+pocController.controller('searchCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.show = false;
-	$scope.order = null;
+	// $scope.searchData = {
+	// 	searchType: 'user',
+	// 	searchFields: [
+	// 		{
+	// 			name: 'profileId',
+	// 			value: ''
+	// 		},
+	// 		{
+	// 			name: 'email',
+	// 			value: ''
+	// 		},
+	// 		{
+	// 			name: 'firstName',
+	// 			value: ''
+	// 		},
+	// 		{
+	// 			name: 'lastName',
+	// 			value: ''
+	// 		},
+	// 		{
+	// 			name: 'companyName',
+	// 			value: ''
+	// 		},
+	// 		{
+	// 			name: 'level',
+	// 			value: ''
+	// 		}
+	// 	],
+	// 	start: 0,
+	// 	end: 10,
+	// 	'$class': 'acp.search.bean.SearchRequest'
+	// };
+	$scope.searchData = {
+	   "searchType":"user",
+	   "searchFields":[
+	      {
+	         "name":"email",
+	         "value":"@",
+	         "action":"contains"
+	      }
+	   ],
+	   "start":0,
+	   "end":2,
+	   "returnFields":[
+	      {
+	         "name":"firstName"
+	      },
+	      {
+	         "name":"lastName"
+	      },
+	      {
+	         "name":"email"
+	      },
+	      {
+	         "name":"profileId"
+	      },
+	      {
+	         "name":"age"
+	      },
+	      {
+	         "name":"birthDay"
+	      },
+	      {
+	         "name":"auto_login"
+	      }
+	   ],
+	   "$class":"acp.search.bean.SearchRequest"
+	}
 
 	$scope.search = function() {
-		$http.post('backend/searchuser.json', $scope.user)
-			.success(function(data) {
-				$scope.results = data;
+		$http
+		.post('/securerest/acp/search/RESTSearch', $scope.searchData)
+		.success(function(data) {
+			if (data.success) {
+				$scope.results = data.result.results;
 				$scope.show = true;
-			});
+			}
+		});
 	};
 
 	$scope.reset = function() {
@@ -19,15 +89,4 @@ pocController.controller('searchUserCtrl', ['$scope', '$http', function($scope, 
 		$scope.show = false;
 	};
 
-	$scope.order = function(col) {
-		if (col === 'userno') {
-			$scope.order = 'userno';
-			$scope.row = 'userno';
-		} else if (col === '-userno') {
-			$scope.order = '-userno';
-			$scope.row = '-userno';
-		}
-	};
 }]);
-
-

@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="pocModule">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -10,17 +10,80 @@
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/app.css">
-  <script src="js/lib/jquery.js"></script>
-  <script src="js/lib/angular.js"></script>
-  <script src="js/lib/angular-route.js"></script>
-
-  <script src="js/controllers.js"></script>
-  <script src="js/app.js"></script>
 
 </head>
 
-<body>
-  <div ng-view></div>
-</body>
+<body data-ng-app="pocModule">
+  <div class="wrapper">
+    <header id="header" class="top-header">
+      <div class="logo">
+        <a href="#/">
+          <img src="img/logo.png" alt="">
+        </a>
+      </div>
+      <div class="top-nav clearfix">
+        <ul class="nav-left list-unstyled">
+          <li>
+            <a href="#/" class="toggle-min"><i class="fa fa-bars"></i></a>
+          </li>
+          <li class="dropdown text-normal nav-profile">
+            <a href="javascript:" class="dropdown-toggle">
+              <span>Daniel Seliger</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav-right pull-right list-unstyled">
+          <li class="dropdown">
+            <a href="javascript:" class="dropdown-toggle">
+              <span>Location Finder</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="javascript:" class="dropdown-toggle">
+              <span class="glyphicon glyphicon-user"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
+    <aside id="nav-container">
+      <div id="nav-wrapper">
+        <ul id="nav" >
+          <li>
+            <a href="#/home"> 
+              <i class="glyphicon glyphicon-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="#/ui"><i class="glyphicon glyphicon-search"></i><span>Search</span></a>
+            <ul style="display: block;">
+              <li class="">
+                <a href="#/ui/buttons"><i class="fa fa-caret-right"></i><span>Master Customer</span></a>
+              </li>
+              <li>
+                <a href="#/ui/typography"><i class="fa fa-caret-right"></i><span>User</span></a>
+              </li>
+              <li>
+                <a href="#/ui/widgets"><i class="fa fa-caret-right"></i><span>Order</span> </a>
+              </li>
+            </ul>
+            <i class="fa fa-caret-right icon-has-ul"></i></li>
+        </ul>
+      </div>
+    </aside>
+
+    <article>
+      <div ng-view></div>
+    </article>
+
+  </div>
+
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/angular.js"></script>
+  <script src="js/lib/angular-route.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>
