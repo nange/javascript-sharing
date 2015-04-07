@@ -9,6 +9,8 @@
 		</div>
 		<div class="panel-body">
 			<form action="" class="form-horizontal" >
+				<input type="hidden" class="form-control" ng-model="searchParams.searchType" value="${field.type}">
+				<input type="hidden" class="form-control" ng-model="searchParams['@class']" value="acp.search.bean.SearchRequest">
 				<c:forEach items="${form.fields}" var="field" varStatus="vs">
 
 					<div class="form-group">
@@ -16,11 +18,11 @@
 						<div class="col-sm-9">
 							<c:choose>
 							<c:when test="${field.type eq 'text'}">
-								<input type="text" class="form-control" ng-model="searchData.searchFields[${vs.index}].value">
+								<input type="text" class="form-control" ng-model="searchParams.searchFields[${vs.index}].value">
 							</c:when>
 							<c:when test="${field.type eq 'select'}">
 								<span class="ui-select">
-									<select ng-model="searchData.searchFields[${vs.index}].value">
+									<select ng-model="searchParams.searchFields[${vs.index}].value">
 										<option value="">Empty</option>
 									</select>
 								</span>
@@ -30,7 +32,7 @@
 									<input type="text" 
 										   class="form-control"
 										   datepicker-popup="{{format}}"
-										   ng-model="searchData.searchFields[${vs.index}].value"
+										   ng-model="searchParams.searchFields[${vs.index}].value"
 										   is-open="opened"
 										   datepicker-options="dateOptions" 
 										   date-disabled="disabled(date, mode)"
@@ -41,6 +43,8 @@
 								</div>
 							</c:when>
 							</c:choose>
+							<input type="hidden" class="form-control" ng-model="searchParams.searchFields[${vs.index}].name" value="${field.name}">
+							<input type="hidden" class="form-control" ng-model="searchParams.searchFields[${vs.index}].action" value="${field.defaultAction.name}">
 						</div>
 					</div>
 

@@ -1,0 +1,215 @@
+{
+   "result":{
+      "fields":[
+         {
+            "name":"profileId",
+            "actions":[
+               {
+                  "name":"is",
+                  "label":"is"
+               }
+            ],
+            "type":"text",
+            "defaultValue":null,
+            "description":null,
+            "values":null,
+            "defaultAction":{
+               "name":"is",
+               "label":"is"
+            },
+            "label":"Profile Id"
+         },
+         {
+            "name":"email",
+            "actions":[
+               {
+                  "name":"is",
+                  "label":"is"
+               },
+               {
+                  "name":"starts with",
+                  "label":"starts with"
+               },
+               {
+                  "name":"ends with",
+                  "label":"ends with"
+               },
+               {
+                  "name":"contains",
+                  "label":"contains"
+               }
+            ],
+            "type":"text",
+            "defaultValue":null,
+            "description":null,
+            "values":null,
+            "defaultAction":{
+               "name":"contains",
+               "label":"contains"
+            },
+            "label":"Email"
+         },
+         {
+            "name":"firstName",
+            "actions":[
+               {
+                  "name":"is",
+                  "label":"is"
+               },
+               {
+                  "name":"starts with",
+                  "label":"starts with"
+               },
+               {
+                  "name":"ends with",
+                  "label":"ends with"
+               },
+               {
+                  "name":"contains",
+                  "label":"contains"
+               }
+            ],
+            "type":"text",
+            "defaultValue":null,
+            "description":null,
+            "values":null,
+            "defaultAction":{
+               "name":"starts with",
+               "label":"starts with"
+            },
+            "label":"First Name"
+         },
+         {
+            "name":"lastName",
+            "actions":[
+               {
+                  "name":"is",
+                  "label":"is"
+               },
+               {
+                  "name":"starts with",
+                  "label":"starts with"
+               },
+               {
+                  "name":"ends with",
+                  "label":"ends with"
+               },
+               {
+                  "name":"contains",
+                  "label":"contains"
+               }
+            ],
+            "type":"text",
+            "defaultValue":null,
+            "description":null,
+            "values":null,
+            "defaultAction":{
+               "name":"starts with",
+               "label":"starts with"
+            },
+            "label":"Last Name"
+         },
+         {
+            "name":"companyName",
+            "actions":[
+               {
+                  "name":"is",
+                  "label":"is"
+               },
+               {
+                  "name":"starts with",
+                  "label":"starts with"
+               },
+               {
+                  "name":"ends with",
+                  "label":"ends with"
+               },
+               {
+                  "name":"contains",
+                  "label":"contains"
+               }
+            ],
+            "type":"text",
+            "defaultValue":null,
+            "description":null,
+            "values":null,
+            "defaultAction":{
+               "name":"contains",
+               "label":"contains"
+            },
+            "label":"Company Name"
+         },
+         {
+            "name":"level",
+            "actions":[
+               {
+                  "name":"is",
+                  "label":"is"
+               }
+            ],
+            "type":"select",
+            "defaultValue":"T2",
+            "description":null,
+            "values":[
+               "T1",
+               "T2",
+               "T3",
+               "T4"
+            ],
+            "defaultAction":{
+               "name":"is",
+               "label":"is"
+            },
+            "label":"User Level"
+         }
+      ],
+      "title":"Search Customer User",
+      "returnFields":[
+         {
+            "name":"profileId",
+            "description":"Profile Id",
+            "dataType":null,
+            "label":null
+         },
+         {
+            "name":"email",
+            "description":"Email",
+            "dataType":null,
+            "label":null
+         },
+         {
+            "name":"firstName",
+            "description":"First Name",
+            "dataType":null,
+            "label":null
+         },
+         {
+            "name":"lastName",
+            "description":"Last Name",
+            "dataType":null,
+            "label":null
+         },
+         {
+            "name":"age",
+            "description":"Age",
+            "dataType":null,
+            "label":null
+         },
+         {
+            "name":"birthDay",
+            "description":"BirthDay",
+            "dataType":"date",
+            "label":null
+         },
+         {
+            "name":"auto_login",
+            "description":"Auto Login ",
+            "dataType":null,
+            "label":null
+         }
+      ]
+   },
+   "code":200,
+   "msg":"service successfully with response",
+   "success":true
+}

@@ -8,11 +8,11 @@ var pocModule = angular.module('pocModule', ['ngRoute', 'pocController']);
 pocModule.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.when('/', {
-			templateUrl: '/tpl/search.jsp?type=user',
+			templateUrl: '/app/views/search.html',
         	controller: 'searchCtrl'
 		})
 		.otherwise({
-			templateUrl: '/tpl/search.jsp',
+			templateUrl: '/securerest/acp/search/RESTSearch',
         	controller: 'searchCtrl'
 		});
 }]);
