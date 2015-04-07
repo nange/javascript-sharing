@@ -1,4 +1,3 @@
-
 <div class="page" ng-controller="searchCtrl">
 	<section class="panel panel-default">
 		<div class="panel-heading">
@@ -19,21 +18,21 @@
 								<option value="">Empty</option>
 							</select>
 						</span>
-						
+
 						<div class="input-group ui-datepicker" ng-switch-when="date">
-							<input type="text" 
+							<input type="text"
 								   class="form-control"
 								   datepicker-popup="{{format}}"
 								   ng-model="searchParams.searchFields[$index].value"
 								   is-open="opened"
-								   datepicker-options="dateOptions" 
+								   datepicker-options="dateOptions"
 								   date-disabled="disabled(date, mode)"
 								   close-text="Close">
 							<span class="input-group-addon" ng-click="open($event)">
 								<i class="fa fa-calendar"></i>
 							</span>
 						</div>
-						
+
 						<input type="hidden" class="form-control" ng-model="searchParams.searchFields[$index].name" value="{{field.name}}">
 					</div>
 				</div>
@@ -59,10 +58,10 @@
 				<th ng-repeat="returnField in form.returnFields">
 				  <div class="th">
 					{{returnField.description}}
-					<span class="glyphicon glyphicon-chevron-up" 
+					<span class="glyphicon glyphicon-chevron-up"
 						ng-click="sortUp(returnField.name)"
 						ng-class="{active: row == returnField.name}"></span>
-					<span class="glyphicon glyphicon-chevron-down" 
+					<span class="glyphicon glyphicon-chevron-down"
 						ng-click="sortDown(returnField.name)"
 						ng-class="{active: row == '-'+returnField.name}"></span>
 				  </div>
@@ -70,36 +69,36 @@
 			  </tr>
 			</thead>
 			<tbody>
-			<tr ng-repeat="result in results.results">
-				<td ng-repeat="returnField in results.returnFields">{{result[returnField.name]}}</td>
+				<tr ng-repeat="result in results.results">
+					<td ng-repeat="returnField in results.returnFields">{{result[returnField.name]}}</td>
 			  </tr>
 			</tbody>
 		</table>
 		<footer class="table-footer">
 		  <div class="row">
-			<div class="col-md-6 page-num-info">
-			  <span>
-				Show
-				<select name="">
-				  <option value="">3</option>
-				  <option value="">5</option>
-				  <option value="">10</option>
-				  <option value="">20</option>
-				</select>
-				entries per page
-			  </span>
-			</div>
-			<div class="col-md-6 text-right pagination-container">
-			  <ul class="pagination-sm pagination">
-				<li class="disabled"><a href="">First</a></li>
-				<li class="disabled"><a href="">Previous</a></li>
-				<li class="active"><a href="">1</a></li>
-				<li class=""><a href="">2</a></li>
-				<li class=""><a href="">3</a></li>
-				<li><a href="">Next</a></li>
-				<li><a href="">Last</a></li>
-			  </ul>
-			</div>
+				<div class="col-md-6 page-num-info">
+				  <span>
+					Show
+					<select ng-model="pagination.percount" ng-change="search()">
+					  <option value="3">3</option>
+					  <option value="5">5</option>
+					  <option value="10">10</option>
+					  <option value="20">20</option>
+					</select>
+					entries per page
+				  </span>
+				</div>
+				<div class="col-md-6 text-right pagination-container">
+				  <ul class="pagination-sm pagination">
+						<li class="disabled"><a href="">First</a></li>
+						<li class="disabled"><a href="">Previous</a></li>
+						<li class="active"><a href="">1</a></li>
+						<li class=""><a href="">2</a></li>
+						<li class=""><a href="">3</a></li>
+						<li><a href="">Next</a></li>
+						<li><a href="">Last</a></li>
+				  </ul>
+				</div>
 		  </div>
 		</footer>
 	</section>
